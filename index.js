@@ -4,6 +4,11 @@ const app = express();
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 dotenv.config();
+
+//js
+//BodyParsing
+app.use(express.urlencoded({extended: false}));
+
 // Mongo DB conncetion
 const database = process.env.MONGOLAB_URI;
 mongoose
